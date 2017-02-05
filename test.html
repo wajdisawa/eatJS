@@ -1,0 +1,105 @@
+<html>
+  <head>
+  	<script type="text/javascript" src="eat-min.js" ></script>
+    <script type="text/javascript" src="eat.developer.js" ></script>
+  	<script type="text/javascript" src="eat.elements-min.js" ></script>
+    <script type="text/javascript" src="eat.IEelements-min.js" ></script>
+    <script type="text/javascript" src="eat.menu-min.js" ></script>
+    <script type="text/javascript" src="eat.animate.js" ></script>
+    <script type="text/javascript" src="eat.ajax-min.js" ></script>
+    <script type="text/javascript" src="eat.plugins.js" ></script>
+    <script type="text/javascript" src="eat.execute-min.js" ></script>
+    <script type="text/javascript" src="data/timer-min.js" ></script>
+    <script type="text/javascript" src="data/block-min.js" ></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  	<script type="text/javascript" >
+  		e(function(){
+
+        e('#a').hide().show().show();
+        e('#m').hide();
+        e('#m').show();
+        e('#a').show();
+        e('#m').hide();
+        
+        e('#a').find('#m');
+        e('#a').find('#m');
+        e('#a').find('#m').hide().show().html('koko');
+        // e('#mainDiv').hide().show().html('koko').hide();
+        // e('#mainDiv').append(e('#appendDiv')).hide();
+        e('.menu').menu();
+        e('.lulu').menu();
+        e('ff').html('custom tag ff');
+        e('e:ff').html('custom tag e:ff');
+        e.ajax({url:'koko',failure:function(a,status,c){
+        },success:function(){
+        }})
+
+  		});
+
+  	</script>
+    <title></title>
+    <meta content="">
+    <style>
+      #menu1 .selected{color: red}
+      #menu2 .selected{background: red}
+     
+      table{border:1px solid black;}
+      td{border:1px solid black;}
+
+    </style>
+  </head>
+  <body>
+    <ul id='menu1' class='menu'>
+      <li><a class='selected'>item1</a></lu>
+      <li><a >item2</a></li>
+      <li><a >item3</a></li>
+      <li><a >item4</a></li>
+    </ul>
+
+    <ul id='menu2' class='menu'>
+      <li><div><div class='selected'>item1</div></div></li>
+      <li><div ><div >item2</div></div></li>
+      <li><div ><a><div >item3</div></a></div></li>
+      <li><div ><div >item4</div></div></li>
+    </ul>
+    
+  	<div id='mainDiv' style= 'display:none;background:url(file:///home/zaid/Downloads/w3jquery.gif);position:fixed;background-repeat:no-repeat;width:100%;height:100%;'>
+  	
+  	</div>
+    <div id='testDiv' style="border:1px solid black ;width:100px;height:100px;" >hello</div>
+    <table id="tableTest">
+      <tr>
+      <td>Peter</td>
+      <td>Griffin</td>
+      </tr>
+      <tr>
+      <td>Lois</td>
+      <td>Griffin</td>
+      </tr>
+      </table>
+
+
+      <!-- margin -->
+      <p>This is a paragraph.</p>
+      <p id="p1" style="outline:1px solid blue;">This is an animated paragraph.</p>
+      <p>This is a paragraph.</p>
+      <!-- margin -->
+    <div id='howDiv'>how </div>
+    <div id='a'>how <div id='m'>mm</div></div>
+    <div id='appendDiv'>soso</div>
+    <ff></ff>
+    <e:ff></e:ff>
+    <div id='timerBTN'>timerBTN</div>
+    <e:container timer="20" timer-event="#timerBTN=>mouseover" timer-done="goto=>http://google.com"><e:timer>0</e:timer></e:container>
+    <div timer-order="DSC" timer="30" timer-event="#timerBTN=>mouseover"> <e:timer>40</e:timer></div>
+
+
+
+    <button id='updateBTN'>updates</button>
+    <div block-url="http://d1g.com/rss/general?as=json" block-ajax-type="json" block-event="#updateBTN=>click" block-on-success="alert('javascript')"  block-on-failure="text=>text or javascript" >
+      loading ...
+    </div>
+
+
+  </body>
+</html>
